@@ -24,8 +24,16 @@ function hayDuplicados (array) {
 
 function cuenta (array, elemento) {
     let count = 0;
-    for ( const nuevo of array)
-}
+    for ( const nuevo of array){
+        if ( nuevo == elemnto){
+            count += 1 
+            if(count > 1) {
+                return true
+            }
+        }
+    }
+    return false
+};
 
 
 
@@ -44,3 +52,16 @@ let array1 = [1,2,6,1,2,5,9];
      console.log(repeat);
 
     //  REPASAR
+
+    const arr1 =  [1, 1, 2, 2, 3, 5, 9, 9];
+/* const arr1 =  [1, 2, 3, 5, 9]; */ /// para probar que efectivamente  da false cuando no hay duplicados
+    var repeat = false;
+    for (var i = 0; i < arr1.length; i++) {
+        for (var j = 0; j < arr1.length; j++) {
+            if (arr1[i] == arr1[j] && i != j) { 
+                repeat= true;
+             }
+         }
+     }
+     console.log(repeat);
+////
